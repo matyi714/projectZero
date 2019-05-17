@@ -1,12 +1,21 @@
 
 package projectzero;
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ProjectZero {
 
     
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws FileNotFoundException {
+        List<Person> al = new ArrayList<>();
+        al = Reader.read();
+        al.sort(new nameCoparator());
+        for (Person person : al) {
+            System.out.println(person.getName());
+        }
     }
 
 }
