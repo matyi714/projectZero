@@ -13,8 +13,9 @@ public class ProjectZero {
         List<Person> al = new ArrayList<>();
         al = Reader.read();
         al.sort(new nameCoparator());
-        for (Person person : al) {
-            System.out.println(person.getName());
+        List<Person> ch = Filter.cityFilter("Chicago", al);
+        for (Person person : ch) {
+            System.out.println(person.getEmail());
         }
     }
 
