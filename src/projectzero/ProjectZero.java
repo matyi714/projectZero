@@ -4,14 +4,20 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ProjectZero {
 
     public static List<Person> al = new ArrayList<>();
     public static List<Person> ch = new ArrayList<>();
 
-    public static void main(String[] args) throws FileNotFoundException {
-        al = Reader.read();
+    public static void main(String[] args) {
+        try {
+            al = Reader.read();
+        } catch (FileNotFoundException ex) {
+            System.out.println("File not found");
+        }
         al.sort(new nameCoparator());
         for (int i = 0; i < 10; i++) {
             System.out.println("##");
