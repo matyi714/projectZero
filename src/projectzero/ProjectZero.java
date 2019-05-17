@@ -19,7 +19,9 @@ public class ProjectZero {
 
     public static void chicagoPeople() {
         for (Person person : ch) {
+            System.out.print(person.getName()); 
             System.out.println(person.getEmail());
+
         }
     }
     
