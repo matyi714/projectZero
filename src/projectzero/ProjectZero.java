@@ -16,7 +16,7 @@ public class ProjectZero {
         try {
             al = Reader.read();
         } catch (FileNotFoundException ex) {
-            System.out.println("File not found");
+            System.out.println("File not found in the project directory");
         }
         al.sort(new nameCoparator());
         for (int i = 0; i < 10; i++) {
