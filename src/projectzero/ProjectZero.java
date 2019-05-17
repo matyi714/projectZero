@@ -13,6 +13,9 @@ public class ProjectZero {
     public static void main(String[] args) throws FileNotFoundException {
         al = Reader.read();
         al.sort(new nameCoparator());
+        for (int i = 0; i < 10; i++) {
+            System.out.println("##");
+        }
         ch = Filter.cityFilter("Chicago", al);
         chicagoPeople();
     }
